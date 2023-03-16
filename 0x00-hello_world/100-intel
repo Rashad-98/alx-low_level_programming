@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -mtune=intel -S $CFILE
+gcc -S $CFILE -mtune=intel
