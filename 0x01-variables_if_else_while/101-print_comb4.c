@@ -19,18 +19,15 @@ int main(void)
 			ii = 50;
 			while (ii <= 57)
 			{
-				if (o != i && o != ii && i != ii)
+				if (o != i && o != ii && i != ii && !(o > i) && !(o > ii) && !(i > ii))
 				{
-					if (!(o > i) && !(o > ii) && !(i > ii))
+					putchar(o);
+					putchar(i);
+					putchar(ii);
+					if (o != 55)
 					{
-						putchar(o);
-						putchar(i);
-						putchar(ii);
-						if (o != 55)
-						{
-							putchar(',');
-							putchar(' ');
-						}
+						putchar(',');
+						putchar(' ');
 					}
 				}
 				ii++;
