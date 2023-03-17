@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: always 0 (success)
+ */
+int main(void)
+{
+	int i = 97;
+
+	while (i <= 122)
+	{
+		if (i == 101 || i == 112)
+			continue;
+		putchar(i);
+	}
+
+	putchar('\n');
+
+	return (0);
+}
