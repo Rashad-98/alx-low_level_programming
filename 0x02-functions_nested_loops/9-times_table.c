@@ -18,6 +18,7 @@ void times_table(void)
 			int result = n * x;
 			if (result > 9)
 			{
+				_putchar(' ');
 				int tens = result / 10;
 				int units = result % 10;
 				_putchar('0' + tens);
@@ -31,7 +32,6 @@ void times_table(void)
 			_putchar(' ');
 			n++;
 		}
-		_putchar('$');
 		_putchar('\n');
 		x++;
 	}
