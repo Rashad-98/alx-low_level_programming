@@ -29,7 +29,7 @@ void times_table(void)
 				if (n > 0)
 				{
 					_putchar(' ');
-					_putchar(' ')
+					_putchar(' ');
 				}
 				_putchar('0' + result);
 			}
