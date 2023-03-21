@@ -20,16 +20,18 @@ void times_table(void)
 			{
 				int tens = result / 10;
 				int units = result % 10;
-				_putchar(' ');
 				_putchar('0' + tens);
 				_putchar('0' + units);
+				_putchar(',');
+				_putchar(' ');
 			}
 			else
 			{
 				_putchar('0' + result);
+				_putchar(',');
+				_putchar(' ')'
+				_putchar(' ');
 			}
-			_putchar(',');
-			_putchar(' ');
 			n++;
 		}
 		_putchar('\n');
