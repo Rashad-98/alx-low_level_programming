@@ -16,7 +16,7 @@ void times_table(void)
 		while (n <= 9)
 		{
 			int result = n * x;
-			
+
 			if (result > 9)
 			{
 				int tens = result / 10;
