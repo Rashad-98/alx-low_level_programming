@@ -16,7 +16,10 @@ void times_table(void)
 		while (n <= 9)
 		{
 			int result = n * x;
-			_putchar('0' + result);
+			int units = result % 10;
+			int tens = result / 10;
+			_putchar('0' + tens);
+			_putchar('0' + units);
 			_putchar(',');
 			_putchar(' ');
 			n++;
