@@ -23,14 +23,13 @@ void times_table(void)
 				_putchar(' ');
 				_putchar('0' + tens);
 				_putchar('0' + units);
-				_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
+				if (n > 0)
+					_putchar(' ');
 				_putchar('0' + result);
-				_putchar(' ');
-				_putchar(' ');
 				_putchar(' ');
 			}
 			if (n < 9)
