@@ -23,6 +23,7 @@ void print_to_98(int n)
 		if (x == 98)
 		{
 			printf("%d\n", x);
+			return;
 		}
 		printf("%d, ", x);
 		x--;
