@@ -9,12 +9,10 @@ void print_to_98(int n)
 	{
 		if (x == 98)
 		{
-			_putchar('0' + x);
+			printf("%d\n", x);
 			return;
 		}
-		_putchar('0' + x);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d\n", x);
 		x++;
 	}
 
