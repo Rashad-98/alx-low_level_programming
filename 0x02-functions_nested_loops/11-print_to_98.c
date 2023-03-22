@@ -18,8 +18,12 @@ void print_to_98(int n)
 		x++;
 	}
 
-	while (x > 98)
+	while (x >= 98)
 	{
+		if (x = 98)
+		{
+			printf("%d\n", x);
+		}
 		printf("%d, ", x);
 		x--;
 	}
