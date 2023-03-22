@@ -12,7 +12,7 @@ void print_to_98(int n)
 			printf("%d\n", x);
 			return;
 		}
-		printf("%d", x);
+		printf("%d, ", x);
 		x++;
 	}
 
