@@ -24,7 +24,7 @@ void print_to_98(int n)
 			_putchar('0' + x);
 			return;
 		}
-		_putchar('0' + x);
+		_putchar('0' + (int)x);
 		_putchar(',');
 		_putchar(' ');
 		x--;
