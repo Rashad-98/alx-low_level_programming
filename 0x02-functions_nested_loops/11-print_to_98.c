@@ -2,31 +2,31 @@
 
 void print_to_98(int n)
 {
-	int n = n;
+	int x = n;
 
-	while (n < 99)
+	while (x < 99)
 	{
-		if (n == 98)
+		if (x == 98)
 		{
-			_putchar('0' + n);
+			_putchar('0' + x);
 			return;
 		}
-		_putchar('0' + n);
+		_putchar('0' + x);
 		_putchar(',');
 		_putchar(' ');
-		n++;
+		x++;
 	}
 
-	while (n > 99)
+	while (x > 99)
 	{
-		if (n == 98)
+		if (x == 98)
 		{
-			_putchar('0' + n);
+			_putchar('0' + x);
 			return;
 		}
-		_putchar('0' + n);
+		_putchar('0' + x);
 		_putchar(',');
 		_putchar(' ');
-		n--;
+		x--;
 	}
 }
