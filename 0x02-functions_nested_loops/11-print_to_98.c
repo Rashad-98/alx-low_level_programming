@@ -18,17 +18,9 @@ void print_to_98(int n)
 		x++;
 	}
 
-	while (x > 99)
+	while (x > 98)
 	{
-		if (x == 98)
-		{
-			_putchar('0' + x);
-			return;
-		}
-		printf("%d", x);
-		_putchar('0' + (int)x);
-		_putchar(',');
-		_putchar(' ');
+		printf("%d, ", x);
 		x--;
 	}
 }
