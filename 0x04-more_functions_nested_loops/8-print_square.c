@@ -8,13 +8,25 @@
  */
 void print_square(int n)
 {
+	int n2 = n;
+	int n1;
+
 	if (n > 0)
 	{
-		while (n > 0)
+		while (n2 > 0)
 		{
-			_putchar('#');
-			n--;
+			n1 = n;
+			while (n1 > 0)
+			{
+				_putchar('#');
+				n1--;
+			}
+			_putchar('\n');
+			n2--;
 		}
 	}
-	_putchar('\n');
+	else
+	{
+		_putchar('\n');
+	}
 }
