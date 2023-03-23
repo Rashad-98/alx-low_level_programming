@@ -14,8 +14,14 @@ void more_numbers(void)
 		int i;
 
 		for (i = 0; i < 15; i++)
-			_putchar(i + '0');
+		{
+			int tens = i / 10;
+			int units = i % 10;
+
+			if (tens > 0)
+				_putchar(tens + '0');
+			_putchar(units + '0');
+		}
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
