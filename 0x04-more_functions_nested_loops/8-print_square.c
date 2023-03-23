@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_line - prints a straight line
+ * print_square - prints a straight line
  * @n: length of line
  *
  * Retrun: void
