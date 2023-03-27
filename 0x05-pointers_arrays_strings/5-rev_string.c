@@ -10,6 +10,8 @@ void print_rev(char *s)
 {
 	int i;
 	int length;
+	int x;
+	int tmp;
 
 	i = 0;
 	length = 0;
@@ -19,15 +21,12 @@ void print_rev(char *s)
 		i++;
 	}
 
-	char revstr[];
-	int x;
-
 	x = 0;
-	while (x < length)
+	while (x <= (length / 2))
 	{
-		revstr[x] = *(s + length - 1);
+		tmp = *(s + length - 1 - x);
+		*(s + length - 1 - x) = *(s + x);
+		*(s + x) = tmp;
 		x++;
 	}
-
-	return (revstr);
 }
