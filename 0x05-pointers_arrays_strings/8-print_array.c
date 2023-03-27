@@ -18,10 +18,10 @@ void print_array(int *a, int n)
 		if (i == (n - 1))
 		{
 			printf("%d", *(a + i));
+			printf("\n");
 			return;
 		}
 		printf("%d, ", *(a + i));
 		i++;
 	}
-	printf("\n");
 }
