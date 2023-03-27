@@ -19,7 +19,7 @@ void print_rev(char *s)
 		i++;
 	}
 
-	char revstr[length];
+	char revstr[];
 	int x;
 
 	x = 0;
