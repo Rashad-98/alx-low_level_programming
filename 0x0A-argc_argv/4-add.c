@@ -3,7 +3,8 @@
 #include <ctype.h>
 
 /**
- * main - program that prints the result of addition of numbers entered as CL arguments
+ * main - program that prints the result of
+ * addition of numbers entered as CL arguments
  * @argc: arguments count
  * @argv: argument vector
  *
@@ -22,9 +23,9 @@ int main(int argc, char **argv)
 		sum = 0;
 		for (o = 1; o < argc; o++)
 		{
-			for (i = 0; **(argv + i) != '\0'; i++)
+			for (i = 0; *(*(argv + o) + i) != '\0'; i++)
 			{
-				if (!isdigit(**(argv + i)))
+				if (!isdigit(*(*(argv + o) + i)))
 				{
 					printf("Error\n");
 					return (1);
