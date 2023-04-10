@@ -13,7 +13,6 @@ int main(int argc, char **argv)
 	int num1;
 	int num2;
 	int result;
-	char str[100];
 
 	if (argc == 1)
 	{
@@ -24,8 +23,7 @@ int main(int argc, char **argv)
 	num1 = atoi(*(argv + 1));
 	num2 = atoi(*(argv + 2));
 	result  = num1 * num2;
-	sprintf(str, "%d", result);
-	printf("%s\n", str);
+	printf("%d\n", result);
 
 	return (0);
 }
