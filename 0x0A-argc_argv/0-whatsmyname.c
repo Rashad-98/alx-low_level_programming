@@ -5,7 +5,7 @@
  * @argc: arguments count
  * @argv: argument vector
  *
- * Retrun: 0 always
+ * Return: 0 always
  */
 int main(int argc, char **argv)
 {
