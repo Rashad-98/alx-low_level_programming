@@ -41,7 +41,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 	{
 		for (i = 0; i < s2length; i++)
-			*(nstr + s1length - 1 + i) = *(s2 + i);
+			*(nstr + s1length + i) = *(s2 + i);
 	}
 
 	*(nstr + s1length + s2length) = '\0';
