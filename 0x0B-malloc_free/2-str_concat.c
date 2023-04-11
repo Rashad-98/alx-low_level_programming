@@ -32,11 +32,17 @@ char *str_concat(char *s1, char *s2)
 	if (nstr == NULL)
 		return (NULL);
 
-	for (i = 0; i < s1length; i++)
-		*(nstr + i) = *(s1 + i);
+	if (s1 != NULL)
+	{
+		for (i = 0; i < s1length; i++)
+			*(nstr + i) = *(s1 + i);
+	}
 
-	for (i = 0; i < s2length; i++)
-		*(nstr + s1length - 1 + i) = *(s2 + i);
+	if (s2 != NULL)
+	{
+		for (i = 0; i < s2length; i++)
+			*(nstr + s1length - 1 + i) = *(s2 + i);
+	}
 
 	*(nstr + s1length + s2length - 1) = '\0';
 
