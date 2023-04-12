@@ -16,6 +16,8 @@ int **alloc_grid(int width, int height)
 	else
 	{
 		int **matrix;
+		/*int *element;
+		int ***row;*/
 		int i;
 		int j;
 
@@ -25,10 +27,18 @@ int **alloc_grid(int width, int height)
 
 		for (i = 0; i < height; i++)
 		{
-			matrix + i = &(*matrix + (i * width));
+			/*
+			row = &matrix;
+			*(row + i) = &(*matrix )
+
+			element = *matrix + (i * width);
+			*(matrix + i) = &element;
+			matrix + i = (*matrix + (i * width));*/
 			for (j = 0; j < width; j++)
 			{
-				*(*matrix + (i * width) + j) = 0;
+				matrix[i][j] = 0;
+
+				/**(*matrix + (i * width) + j) = 0;*/
 			}
 		}
 
