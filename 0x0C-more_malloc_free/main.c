@@ -4,47 +4,18 @@
 #include <string.h>
 
 /**
- *  * simple_print_buffer - prints buffer in hexa
- *   * @buffer: the address of memory to print
- *    * @size: the size of the memory to print
- *     *
- *      * Return: Nothing.
- *       */
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-	    unsigned int i;
-
-	        i = 0;
-		    while (i < size)
-			        {
-					        if (i % 10)
-							        {
-									            printf(" ");
-										            }
-						        if (!(i % 10) && i)
-								        {
-										            printf("\n");
-											            }
-							        printf("0x%02x", buffer[i]);
-								        i++;
-									    }
-		        printf("\n");
-}
-
-/**
- *  * main - check the code
- *   *
- *    * Return: Always 0.
- *     */
+ *  main - program for testing
+ *
+ *  Return: 0 always
+ */
 int main(void)
 {
-	    char *a;
+	char str[] = "24592";
+	int *p;
 
-	        a = _calloc(98, sizeof(char));
-		    strcpy(a, "Best");
-		      strcpy(a + 4, " School! :)\n");
-			    a[97] = '!';
-			        simple_print_buffer(a, 98);
-				    free(a);
-				        return (0);
+	printf("string: %s\n", str);
+	p = str_to_int(str);
+	printf("number: %d\n", *(p + 1));
+
+	return (0);
 }
