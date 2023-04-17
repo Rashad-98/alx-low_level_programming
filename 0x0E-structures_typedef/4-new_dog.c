@@ -2,6 +2,24 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - find length of string
+ * @str: string
+ *
+ * Return: integer
+ */
+int _strlen(char *str)
+{
+	int i;
+	int length;
+
+	length = 0;
+	for (i = 0; *(str + i) != '\0'; i++)
+		length++;
+
+	return (length);
+}
+
+/**
  * new_dog - create a varible of type dog_t
  * @name: name of dog
  * @age: age of dog
@@ -20,13 +38,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!name || !owner || age < 0)
 		return (NULL);
 
-	n_length = 0;
-	for (i = 0; *(name + i) != '\0'; i++)
-		n_length++;
-
-	o_length = 0;
-	for (i = 0; *(owner + i) != '\0'; i++)
-		o_length++;
+	n_length = (unsigned int long)_strlen(name);
+	o_length = (unsigned int long)_strlen(owner);
 
 	d->name = malloc(((n_length) + 1) * sizeof(char));
 	if (d->name == NULL)
