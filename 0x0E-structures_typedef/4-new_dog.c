@@ -7,7 +7,7 @@
  *
  * Return: integer
  */
-int _strlen(char *str)
+int _strlen(const char *str)
 {
 	int i;
 	int length;
