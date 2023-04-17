@@ -1,0 +1,15 @@
+#include "dog.h"
+
+/**
+ * inti_dog - initalizes dog information
+ * @d: pointer to structure dog
+ * @name: pointer to dog's name
+ * @age: dog's age
+ * @owner: pointer to dog's owner name
+ */
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	d->name = name;
+	d->age = age;
+	d->owner = owner;
+}
