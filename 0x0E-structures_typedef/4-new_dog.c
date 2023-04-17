@@ -34,10 +34,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	for (i = 0; i < n_length + 1; i++)
+	for (i = 0; i < n_length; i++)
 		*(d->name + i) = *(name + i);
 
-	for (i = 0; i < o_length + 1; i++)
+	for (i = 0; i < o_length; i++)
 		*(d->owner + i) = *(name + i);
 
 	d->age = age;
