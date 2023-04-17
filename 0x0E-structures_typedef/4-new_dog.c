@@ -12,6 +12,7 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	long unsigned int i;
 	char *the_name = malloc(strlen(name) + 1);
 	char *the_owner = malloc(strlen(owner) + 1);
 	dog_t *d = malloc(sizeof(dog_t));
@@ -25,8 +26,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	strcpy(the_name, name);
-	strcpy(the_owner, owner);
+	for (i = 0; i < strlen(name) + 1; i++)
+	{
+		*(the_name + i) = *(name + i);
+		*(the_owner + i) = *(owner + i);
+	}
 
 	d->name = the_name;
 	d->age = age;
