@@ -1,7 +1,7 @@
 #include "dog.h"
 
 /**
- * inti_dog - initalizes dog information
+ * init_dog - initalizes dog information
  * @d: pointer to structure dog
  * @name: pointer to dog's name
  * @age: dog's age
