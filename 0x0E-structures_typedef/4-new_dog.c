@@ -44,11 +44,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 		*(d->name + i) = *(name + i);
 	*(d->name + n_length) = '\0';
 
+	d->age = age;
+
 	for (i = 0; i < o_length; i++)
 		*(d->owner + i) = *(name + i);
 	*(d->owner + o_length) = '\0';
-
-	d->age = age;
 
 	return (d);
 }
