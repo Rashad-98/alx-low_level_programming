@@ -36,11 +36,11 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	for (i = 0; i < strlen(name) + 1; i++)
-	{
+	for (i = 0; i < n_length + 1; i++)
 		*(the_name + i) = *(name + i);
-		*(the_owner + i) = *(owner + i);
-	}
+
+	for (i = 0; i < o_length + 1; i++)
+		*(the_owner + i) = *(name + i);
 
 	d->name = the_name;
 	d->age = age;
