@@ -2,12 +2,12 @@
 #include <stdlib.h>
 
 /**
- * new_dog - create a varible of type dot_t
+ * new_dog - create a varible of type dog_t
  * @name: name of dog
  * @age: age of dog
  * @owner: owner of dog
  *
- * Return: pointer to dot_t
+ * Return: pointer to dog_t
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -15,6 +15,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 	dog_t *d = malloc(sizeof(dog_t));
 
 	if (d == NULL)
+		return (NULL);
+
+	if (!name || !owner || age < 0)
 		return (NULL);
 
 	n_length = 0;
