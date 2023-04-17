@@ -12,16 +12,16 @@
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	long unsigned int i;
+	unsigned int long i;
 	char *the_name = malloc(strlen(name) + 1);
 	char *the_owner = malloc(strlen(owner) + 1);
 	dog_t *d = malloc(sizeof(dog_t));
 
 	if (the_name == NULL)
-		return NULL;
+		return (NULL);
 
 	if (the_owner == NULL)
-		return NULL;
+		return (NULL);
 
 	if (d == NULL)
 		return (NULL);
