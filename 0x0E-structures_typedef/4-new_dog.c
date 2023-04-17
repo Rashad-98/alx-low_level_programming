@@ -20,6 +20,24 @@ int _strlen(char *str)
 }
 
 /**
+ * _strcpy - copies string
+ * @src: source
+ * @dest: destination
+ *
+ * Return: copied string
+ */
+char *_strcpy(char *dest, char *src)
+{
+	int i;
+
+	for (i = 0; *(src + i) != '\0'; i++)
+		*(dest + i) = *(dest + i);
+	*(dest + i) = '\0';
+
+	return (dest);
+}
+
+/**
  * new_dog - create a varible of type dog_t
  * @name: name of dog
  * @age: age of dog
@@ -29,7 +47,7 @@ int _strlen(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	int i, n_length, o_length;
+	int n_length, o_length;
 	dog_t *d;
 
 	if (!name || !owner || age < 0)
@@ -58,15 +76,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	for (i = 0; i < n_length; i++)
-		*(d->name + i) = *(name + i);
-	*(d->name + n_length) = '\0';
-
+	d->name = _strcpy(d->name, name);
 	d->age = age;
-
-	for (i = 0; i < o_length; i++)
-		*(d->owner + i) = *(name + i);
-	*(d->owner + o_length) = '\0';
+	d->owner = _strcpy(d->owner, owner);
 
 	return (d);
 }
