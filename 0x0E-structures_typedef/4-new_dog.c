@@ -29,19 +29,19 @@ int _strlen(char *str)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	unsigned int long i, n_length, o_length;
+	int i, n_length, o_length;
 	dog_t *d;
+
+	if (!name || !owner || age < 0)
+		return (NULL);
 
 	d = malloc(sizeof(dog_t));
 
 	if (d == NULL)
 		return (NULL);
 
-	if (!name || !owner || age < 0)
-		return (NULL);
-
-	n_length = (unsigned int long)_strlen(name);
-	o_length = (unsigned int long)_strlen(owner);
+	n_length = _strlen(name);
+	o_length = _strlen(owner);
 
 	d->name = malloc(((n_length) + 1) * sizeof(char));
 	if (d->name == NULL)
