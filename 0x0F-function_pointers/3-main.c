@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stddef.h>
 #include "3-calc.h"
 
 /**
@@ -12,15 +13,14 @@
  */
 int main(int argc, char **argv)
 {
-	char *op = *(argv + 2);
-
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (*op == '+' || *op == '-' || *op == '*' || *op == '/' || *op == '%')
+	else
 	{
+		char *op = *(argv + 2);
 		int n1 = atoi(*(argv + 1));
 		int n2 = atoi(*(argv + 3));
 		int (*f)(int, int);
@@ -33,15 +33,15 @@ int main(int argc, char **argv)
 		}
 
 		f = get_op_func(op);
+		if (f == NULL)
+		{
+			printf("Error\n");
+			exit(99);
+		}
 		result = f(n1, n2);
 
 		printf("%d\n", result);
 
 		return (0);
 	}
-
-	printf("Error\n");
-	exit(99);
-
-	return (0);
 }
