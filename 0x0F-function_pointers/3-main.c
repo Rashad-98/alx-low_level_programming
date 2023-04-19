@@ -10,35 +10,36 @@
  */
 int main(int argc, char **argv)
 {
+	char *op;
+	int n1, n2;
+	int (*f)(int, int);
+	int result;
+
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	else
+
+	op = *(argv + 2);
+	n1 = atoi(*(argv + 1));
+	n2 = atoi(*(argv + 3));
+
+	if ((*op == '/' || *op == '%') && n2 == 0)
 	{
-		char *op = *(argv + 2);
-		int n1 = atoi(*(argv + 1));
-		int n2 = atoi(*(argv + 3));
-		int (*f)(int, int);
-		int result;
-
-		if ((*op == '/' || *op == '%') && n2 == 0)
-		{
-			printf("Error\n");
-			exit(100);
-		}
-
-		f = get_op_func(op);
-		if (f == NULL)
-		{
-			printf("Error\n");
-			exit(99);
-		}
-		result = f(n1, n2);
-
-		printf("%d\n", result);
-
-		return (0);
+		printf("Error\n");
+		exit(100);
 	}
+
+	f = get_op_func(op);
+	if (f == NULL)
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	result = f(n1, n2);
+
+	printf("%d\n", result);
+
+	return (0);	
 }
