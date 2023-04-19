@@ -32,7 +32,7 @@ int main(int __attribute__((__unused__)) argc, char **argv)
 	}
 
 	f = get_op_func(op);
-	if (!f)
+	if (!f || *(op + 1) != '\0')
 	{
 		printf("Error\n");
 		exit(99);
