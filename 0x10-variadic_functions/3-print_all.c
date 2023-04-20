@@ -47,7 +47,7 @@ void print_all(const char * const format, ...)
 	length = _strlen(format);
 
 	i = 0;
-	while (i < length)
+	while (i < length && format != NULL && *(format + i))
 	{
 		switch (*(format + i))
 		{
