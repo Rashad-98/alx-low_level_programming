@@ -30,5 +30,5 @@ list_t *add_node(list_t **head, const char *str)
 	if (new == NULL || *head == NULL)
 		return (NULL);
 
-	return (new);
+	return (*head);
 }
