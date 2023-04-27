@@ -10,7 +10,7 @@
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	if (str && head)
+	if (!(str == NULL) && !(head == NULL))
 	{
 		unsigned int i, len;
 		char *nstr = strdup(str);
