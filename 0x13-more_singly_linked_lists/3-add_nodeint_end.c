@@ -24,11 +24,11 @@ listint_t *add_nodeint_end(listint_t **head, const int n)
 		(*head) = new;
 		return (new);
 	}
-	
+
 	tmp = *head;
 	for (i = 0; tmp->next != NULL; i++)
 		tmp = tmp->next;
-	
+
 	tmp->next = new;
 
 	return (new);
