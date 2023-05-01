@@ -25,8 +25,10 @@ void free_listint2(listint_t **head)
 
 	if (head == NULL || *head == NULL)
 		return;
-
-	tmp = *head;
-	*head = NULL;
-	free_listint(tmp);
+	if (*head)
+	{
+		tmp = *head;
+		*head = NULL;
+		free_listint(tmp);
+	}
 }
