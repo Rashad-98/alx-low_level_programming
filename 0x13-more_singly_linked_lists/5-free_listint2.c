@@ -15,7 +15,12 @@ void free_listint2(listint_t **head)
 		if (tmp->next == NULL)
 		{
 			free(tmp);
+			tmp = *head;
 			i = 0;
+		}
+		else
+		{
+			tmp = tmp->next;
 		}
 	}
 
