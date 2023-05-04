@@ -15,8 +15,6 @@ unsigned int get_length(const char *str)
 	for (i = 0; *(str + i) != '\0'; i++)
 		length++;
 
-	printf("length: %u\n", length);
-
 	return (length);
 }
 
@@ -37,7 +35,6 @@ int _pow(int n, int p)
 		p--;
 	}
 
-	printf("power: %d\n", result);
 	return (result);
 }
 
