@@ -52,6 +52,9 @@ unsigned int binary_to_uint(const char *b)
 	unsigned int num_uint;
 	unsigned int i, len, place;
 
+	if (b == NULL)
+		return (0);
+
 	len = get_length(b);
 
 	num_uint = 0;
