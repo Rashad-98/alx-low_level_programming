@@ -16,7 +16,7 @@ void print_binary(unsigned long int n)
 
 	bits = 0;
 	ncpy = n;
-	for (i = 0; i < 20; i++)
+	for (i = 0; i < ULONG_MAX; i++)
 	{
 		if (ncpy == 1)
 		{
