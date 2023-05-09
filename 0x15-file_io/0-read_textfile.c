@@ -39,13 +39,24 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		path[len + i + 1] = '\0';
 		fd = open(path, O_RDONLY);
 		if (fd < 0)
+		{
+			free(buffer);
 			return (0);
+		}
 		read_count = read(fd, buffer, letters);
 		if (read_count < 0)
+		{
+			free(buffer);
+			close(fd);
 			return (0);
+		}
 		written = write(1, buffer, read_count);
 		if (written < 0 || !(written == read_count))
+		{
+			free(buffer);
+			close(fd);
 			return (0);
+		}
 		free(buffer);
 		close(fd);
 		return (read_count);
