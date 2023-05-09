@@ -17,27 +17,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	else
 	{
-		char path[PATH_MAX];
 		char *buffer;
-		int i, len = 0;
 		int fd;
 		ssize_t written, read_count;
 
 		buffer = malloc((sizeof(char) * letters) + 1);
 		if (buffer == NULL)
 			return (0);
-		getcwd(path, sizeof(path));
-		for (i = 0; *(path + i) != '\0'; i++)
-		{
-			len++;
-		}
-		path[len] = '/';
-		for (i = 0; *(filename + i) != '\0'; i++)
-		{
-			path[len + i + 1] = *(filename + i);
-		}
-		path[len + i + 1] = '\0';
-		fd = open(path, O_RDONLY);
+	
+		fd = open(filename, O_RDONLY);
 		if (fd < 0)
 		{
 			free(buffer);
