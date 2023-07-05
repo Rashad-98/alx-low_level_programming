@@ -10,6 +10,28 @@
  */
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	printf("hello world!");
+	unsigned int i;
+
+
+	if (!head || !*head)
+	{
+		return (-1);
+	}
+	else if (index == 0)
+	{
+		*head = (*head)->next;
+		return (1);
+	}
+	else
+	{
+		listint_t *current = *head;
+
+		for (i = 0; i < index - 1; i++)
+		{
+			current = current->next;
+		}
+		current->next = current->next->next;
+	}
+
 	return (1);
 }
