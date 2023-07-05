@@ -3,6 +3,9 @@
 /**
  * traverse_listint - reverses list
  * @old_head: old head
+ * @new_head: new head
+ *
+ * Return: node
  */
 listint_t *traverse_listint(listint_t *old_head, listint_t *new_head)
 {
@@ -25,13 +28,13 @@ listint_t *reverse_listint(listint_t **head)
 {
 	int i;
 	listint_t *current = *head;
-	
+
 	for (i = 0; current->next; i++)
 	{
 		current = current->next;
 	}
 	traverse_listint(*head, current)->next = *head;
-	
+
 	(*head)->next = NULL;
 
 	*head = current;
