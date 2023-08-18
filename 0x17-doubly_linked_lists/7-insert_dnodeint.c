@@ -33,14 +33,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		p->prev->next = node;
 		node->next = p;
 		p->prev = node;
+		return (node);
 	}
 	else if (!p && i == idx)
 	{
 		return (add_dnodeint_end(h, (const int)n));
 	}
-	else
-	{
-		return (NULL);
-	}
 
+	return (NULL);
 }
